@@ -29,11 +29,11 @@ public class UsuarioRepositoryTest {
 	
 	@Before
 	public void setUp() {
-		Usuario u = new Usuario();
-		u.setNome("Set Up User");
-		u.setPassword("Senha123");
-		u.setEmail(EMAIL);
-		repository.save(u);
+		Usuario usuario = new Usuario();
+		usuario.setNome("Set Up User");
+		usuario.setPassword("Senha123");
+		usuario.setEmail(EMAIL);
+		repository.save(usuario);
 	}
 	
 	@After 
@@ -44,11 +44,11 @@ public class UsuarioRepositoryTest {
 	@Test
 	public void testSave() {
 		
-		Usuario u = new Usuario() ;
-		u.setNome("Teste");
-		u.setPassword("123456");
-		u.setEmail("teste@teste.com") ;
-		Usuario response = repository.save(u);
+		Usuario usuario = new Usuario() ;
+		usuario.setNome("Teste");
+		usuario.setPassword("123456");
+		usuario.setEmail("teste@teste.com") ;
+		Usuario response = repository.save( usuario );
 		
 		assertNotNull(response);
 	}
